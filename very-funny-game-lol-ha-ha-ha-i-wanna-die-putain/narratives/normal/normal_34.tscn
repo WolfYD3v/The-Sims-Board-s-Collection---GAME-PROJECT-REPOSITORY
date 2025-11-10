@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1538g4whdwno"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_0u6yj"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="3_7sf0r"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_0fepp"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="4_c0fpt"]
+[ext_resource type="Texture2D" uid="uid://c8vdc6340cukt" path="res://assets/images/wikipedia_en_toilet_paper.png" id="5_0u6yj"]
+
+[node name="Normal34" instance=ExtResource("1_0u6yj")]
+description = "Zail: A plagiarized essay about toilet paper..."
+next_button_text = "Zail: What the fuck is going on here..."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_7sf0r")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_c0fpt")]
+layout_mode = 2
+text = "Where was I...
+Ah yes, the salmon."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_c0fpt")]
+layout_mode = 2
+text = "Once collected, you decided to eat the salmon as it is still cold.
+You don't have lemon but you don't care.
+\"This is delicious!\" you say. It has this taste of victory against the system you like."
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_c0fpt")]
+layout_mode = 2
+text = "You are against the system, against the big corporations that want to rule the world, which was one of the major causes of the war.
+A fight between corporations to monopolize the production of toilet paper.
+Oh, toilet paper... the greatest thing created by humanity."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("4_0fepp")]
+layout_mode = 2
+texture = ExtResource("5_0u6yj")
+
+[node name="ElementLabel4" parent="Nodes/PageArea/PageContent/Elements" index="4" instance=ExtResource("4_c0fpt")]
+layout_mode = 2
+text = "Although paper had been known as a wrapping and padding material in China since the 2nd century BC, a reference to the use of toilet paper dates back as early as c. 589 when the scholar-official Yan Zhitui (531–591) wrote: \"Paper on which there are quotations or commentaries from the Five Classics or the names of sages, I dare not use for toilet purposes.\"
+
+During the later Tang dynasty (618–907 AD), an Arab traveller to China in the year 851 AD remarked they [the Chinese] do not wash themselves with water when they have done their necessities; but they only wipe themselves with paper.
+
+During the early 14th century, it was recorded that in what is now Zhejiang alone, ten million packages of 1,000 to 10,000 sheets of toilet paper were manufactured annually. During the Ming dynasty (1368–1644 AD), it was recorded in 1393 that an annual supply of 720,000 sheets of toilet paper (approximately 2 by 3 ft (60 by 90 cm)) were produced for the general use of the imperial court at the capital of Nanjing. From the records of the Imperial Bureau of Supplies of that same year, it was also recorded that for the Hongwu Emperor's imperial family alone, there were 15,000 sheets of special soft-fabric toilet paper made, and each sheet of toilet paper was perfumed.
+
+Elsewhere, wealthy people wiped themselves with wool, lace or hemp, while less wealthy people used their hand when defecating into rivers, or cleaned themselves with various materials such as rags, wood shavings, leaves, grass, hay, stones, pessoi, sand, moss, water, snow, ferns, plant husks, fruit skins, seashells, or corncobs, depending upon the country and weather conditions or social customs. In Ancient Rome, a sponge on a stick was commonly used, and, after use, placed back in a pail of vinegar. Several talmudic sources indicating ancient Jewish practice refer to the use of small pebbles, often carried in a special bag, and also to the use of dry grass and of the smooth edges of broken pottery jugs (e.g., Shabbat 81a, 82a, Yevamot 59b). These are all cited in the classic Biblical and Talmudic Medicine by the German physician Julius Preuss (Eng. trans. Sanhedrin Press, 1978).
+
+The 16th-century French satirical writer François Rabelais, in Chapter XIII of Book 1 of his novel sequence Gargantua and Pantagruel, has his character Gargantua investigate a great number of ways of cleansing oneself after defecating. Gargantua dismisses the use of paper as ineffective, rhyming that: \"Who his foul tail with paper wipes, Shall at his ballocks leave some chips.\" (Sir Thomas Urquhart's 1653 English translation). He concludes that \"the neck of a goose, that is well downed\" provides an optimum cleansing medium.
+
+The rise of publishing by the eighteenth century led to the use of newspapers and cheap editions of popular books for cleansing. Lord Chesterfield, in a letter to his son in 1747, told of a man who purchased
+
+    a common edition of Horace, of which he tore off gradually a couple of pages, carried them with him to that necessary place, read them first, and then sent them down as a sacrifice to Cloacina; thus was so much time fairly gained...
+
+In many parts of the world, especially where toilet paper or the necessary plumbing for disposal may be unavailable or unaffordable, toilet paper is not used. Also, in many parts of the world people consider using water a much cleaner and more sanitary practice than using paper. Cleansing is then performed with other methods or materials, such as water, for example using a bidet, a lota, rags, sand, leaves (including seaweed), corn cobs, animal furs, sticks or hands; afterwards, hands are washed with water and possibly soap. "
+
+[node name="ElementLabel5" parent="Nodes/PageArea/PageContent/Elements" index="5" instance=ExtResource("4_c0fpt")]
+layout_mode = 2
+text = "As a commodity, Joseph Gayetty is widely credited with being the inventor of modern commercially available toilet paper in the United States. Gayetty's paper, first introduced in 1857, was available as late as the 1920s. Gayetty's Medicated Paper was sold in packages of flat sheets, watermarked with the inventor's name. Original advertisements for the product used the tagline \"The greatest necessity of the age! Gayetty's medicated paper for the water-closet\".
+
+Seth Wheeler of Albany, New York, obtained the earliest United States patents for toilet paper and dispensers, the types of which eventually were in common use in that country, in 1883. Toilet paper dispensed from rolls was popularized when the Scott Paper Company began marketing it in 1890.
+
+The manufacturing of this product had a long period of refinement, considering that as late as the 1930s, a selling point of the Northern Tissue company was that their toilet paper was \"splinter free\". The widespread adoption of the flush toilet increased the use of toilet paper, as heavier paper was more prone to clogging the trap that prevents sewer gases from escaping through the toilet.
+
+Softer, two ply toilet roll was introduced in Britain in 1942, by St Andrew Mills in Walthamstow; this became the famous Andrex.
+
+Moist toilet paper, called wet wipes, was first introduced in the United Kingdom by Andrex in the 1990s. It has been promoted as being a better method of cleaning than dry toilet paper after defecation, and may be useful for women during menstruation. It was promoted as a flushable product but it has been implicated in the creation of fatbergs; by 2016 some municipalities had begun education campaigns advising people not to flush used wet wipes.
+
+More than seven billion rolls of toilet paper are sold yearly in the United States where an average of 23.6 rolls per capita per year is used."
+
+[node name="ElementLabel6" parent="Nodes/PageArea/PageContent/Elements" index="6" instance=ExtResource("4_c0fpt")]
+layout_mode = 2
+text = "In 1973, Johnny Carson joked in his Tonight Show monologue about comments made by Wisconsin congressman Harold V. Froehlich about the possibility of a toilet paper shortage. Subsequently, consumers purchased abnormal amounts, causing an actual shortage in the United States for several months.
+
+Toilet paper has been one of the commodities subject to shortages in Venezuela starting in the 2010s; the government seized one toilet paper factory in an effort to resolve the problem.
+
+During the COVID-19 pandemic, toilet paper shortages were reported in March 2020 in multiple countries due to hoarding and panic buying. At first, few believed the pandemic would be serious. Later, people realized they might need to stock up on certain items in case of a shelter-in-place order, or in case they did not know how long such an order would last; suppliers could not assure that they could keep up with demand. However, manufacturers continued to produce even more than they had before. Demand was higher for the types of toilet paper used at home. In some countries the bidet was already seen as a solution, and a survey before the pandemic had indicated an increasing number of Americans would be interested. Amid the panic buying during the pandemic, the Australian toilet paper brand Quilton donated a million of toilet paper rolls to vulnerable Australians who were struggling due to the shortages of toilet paper."

@@ -1,0 +1,265 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvbb364nr0f7f"]
+
+[ext_resource type="Script" uid="uid://dxf36e6sa422r" path="res://scenes/unlocks_shop/unlocks_shop.gd" id="1_uefxg"]
+[ext_resource type="Theme" uid="uid://j2y3ccmcica2" path="res://assets/themes/unlocks_shop_theme.tres" id="1_uepjv"]
+[ext_resource type="Texture2D" uid="uid://b1x6cqdq6iyn7" path="res://assets/images/unlocks_shop_bg.png" id="2_bvoqo"]
+[ext_resource type="Texture2D" uid="uid://bxg8hoqred74q" path="res://assets/images/unlocks_shop_house.png" id="4_p07ww"]
+[ext_resource type="Texture2D" uid="uid://cbkuss14fpnwe" path="res://assets/images/unlocks_shop_upgrade_button_icon.png" id="4_uepjv"]
+[ext_resource type="Texture2D" uid="uid://ct0fcein0worm" path="res://assets/images/unlocks_shop_grass.png" id="5_cbgmy"]
+[ext_resource type="Texture2D" uid="uid://boo383ctivqj7" path="res://assets/images/unlocks_shop_sun.png" id="6_cbgmy"]
+
+[sub_resource type="Animation" id="Animation_2vtfy"]
+resource_name = "open_anim_house"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Vector2(0, 1000), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.5),
+"transitions": PackedFloat32Array(1, 0.5, 2),
+"update": 0,
+"values": [Vector2(0, 1000), Vector2(0, 1000), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.5),
+"transitions": PackedFloat32Array(1, 0.5, 2),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sun:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Vector2(671, -2000), Vector2(671, -311)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sun:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Vector2(2.5, 2.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p07ww"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sun:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(671, -311)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sun:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h8yx2"]
+_data = {
+&"RESET": SubResource("Animation_p07ww"),
+&"open_anim_house": SubResource("Animation_2vtfy")
+}
+
+[node name="UnlocksShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(804, 447)
+theme = ExtResource("1_uepjv")
+script = ExtResource("1_uefxg")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bvoqo")
+expand_mode = 1
+
+[node name="Background2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-7.4999886, 894.99994)
+texture = ExtResource("4_p07ww")
+expand_mode = 1
+
+[node name="Background3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -0.0009765625
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(3, 898)
+texture = ExtResource("5_cbgmy")
+expand_mode = 1
+
+[node name="Sun" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 671.0
+offset_top = -311.0
+offset_right = 671.0
+offset_bottom = -311.0017
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(796, 456)
+texture = ExtResource("6_cbgmy")
+stretch_mode = 3
+
+[node name="Nodes" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="UpgradeButton" type="Button" parent="Nodes"]
+layout_mode = 2
+text = "UPGRADE NAME
+[NB] UPRADES POINTS NEEDED"
+icon = ExtResource("4_uepjv")
+alignment = 0
+
+[node name="UpgradePointsLabel" type="Label" parent="Nodes"]
+layout_mode = 2
+text = "[nb] upgrade points"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Nodes"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "  X  "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h8yx2")
+}
+
+[connection signal="pressed" from="Nodes/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="Nodes/CloseButton" to="." method="_on_close_button_pressed"]

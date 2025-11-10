@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqp5v1aqsdimw"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_5bi7n"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_pmm5i"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_xydsp"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="4_fl7me"]
+[ext_resource type="PackedScene" uid="uid://dnc2upoaevs0m" path="res://scenes/base_page/elements/element_video.tscn" id="4_ywsdy"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="5_0l4br"]
+[ext_resource type="VideoStream" uid="uid://dejipsl8qmjmm" path="res://assets/videos/cookies_video_3.ogv" id="5_xydsp"]
+[ext_resource type="Texture2D" uid="uid://dd3p21t4685i7" path="res://assets/images/cookies/clock.png" id="6_pmm5i"]
+
+[node name="Cookies8" instance=ExtResource("1_5bi7n")]
+theme = ExtResource("2_pmm5i")
+description = "This meteorite is huge!!!"
+next_button_text = "CEO: send them immediatly"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_xydsp")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementVideo" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_ywsdy")]
+layout_mode = 2
+stream = ExtResource("5_xydsp")
+speed_scale = 0.5
+loop = false
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_0l4br")]
+layout_mode = 2
+texture = ExtResource("6_pmm5i")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_fl7me")]
+layout_mode = 2
+text = "CEO: How much time do we have.
+Employee with a name: Based on the speed of the object, it's size and his distance from our planet… really quick, big and a little bit far… 2-3 days if we are optimist.
+CEO: And if we're not.
+The same employee than before: 1 day, or less.
+Someone employee else: Send them, I'm not that old to die now!
+CEO: 87 years old is old, not gonna lie.
+This old employee: Not for me.
+A woman employee: Can you guys PLEASE focus on the meteorite?
+CEO: Ah yes, the meteorite…
+CEO: I know what to do…"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="3"]
+color = Color(0.7836526, 0.28578043, 0, 1)

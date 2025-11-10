@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ck0rhg8hc3c4q"]
+
+[node name="ElementLabel" type="Label"]
+custom_minimum_size = Vector2(1100, 0)
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+autowrap_mode = 3

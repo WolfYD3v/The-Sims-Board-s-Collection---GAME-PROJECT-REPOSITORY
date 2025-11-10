@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy7578halbpsl"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_b60in"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_sxucv"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_b60in"]
+
+[node name="Normal38" instance=ExtResource("1_b60in")]
+description = "An happy end for the best to come"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_sxucv")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_b60in")]
+layout_mode = 2
+text = "After watching this funny video about quenouilles, you wasted no time and go on X to post about why Elon Musk is a Nazi and should be removed from the world.
+
+Like every end of your days..."

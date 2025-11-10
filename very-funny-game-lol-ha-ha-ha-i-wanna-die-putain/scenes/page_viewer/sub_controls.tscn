@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://crfdf2wxpboqg"]
+
+[ext_resource type="Theme" uid="uid://b570iwn83mb6g" path="res://assets/themes/sub_controls_theme.tres" id="1_3hvr0"]
+[ext_resource type="Script" uid="uid://dh38veg0ttqff" path="res://scenes/page_viewer/sub_controls.gd" id="1_tndn6"]
+
+[node name="SubControls" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 401.0
+grow_vertical = 2
+theme = ExtResource("1_3hvr0")
+script = ExtResource("1_tndn6")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Controls" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubNARRATIVESHubButton" type="Button" parent="Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "Sub-NARRATIVES Hub"
+alignment = 0
+
+[connection signal="pressed" from="Controls/SubNARRATIVESHubButton" to="." method="_on_sub_narratives_hub_button_pressed"]

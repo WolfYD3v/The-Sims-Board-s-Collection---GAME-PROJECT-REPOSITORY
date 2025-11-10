@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdciyki3ql7xu"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_f88wu"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_wsbfy"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_t5jeb"]
+[ext_resource type="Texture2D" uid="uid://ca3b6ikyibj4t" path="res://assets/images/normal/6.png" id="4_f88wu"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_mfw1h"]
+
+[node name="Normal7" instance=ExtResource("1_f88wu")]
+description = "Looking at a light"
+next_button_text = "Jaine: Do it"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_wsbfy")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_t5jeb")]
+layout_mode = 2
+texture = ExtResource("4_f88wu")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_mfw1h")]
+layout_mode = 2
+text = "You are near a spot light; as you are curious, you really want to see how bright it is.
+Why not look at the light? It's interesting."

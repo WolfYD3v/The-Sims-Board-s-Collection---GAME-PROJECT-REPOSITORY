@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1lat16m6dw0b"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_skhjs"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_fvbr0"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_pi5ma"]
+
+[node name="Normal26" instance=ExtResource("1_skhjs")]
+description = "Going into a restaurant"
+next_button_text = "Zail: Let's get there!"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_fvbr0")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_pi5ma")]
+layout_mode = 2
+text = "I have heard about a special meal that is served only here. It is a great thing to archive, some unique culture about this server.
+
+There are some good restaurants here, and they are not too far from the cinema!"

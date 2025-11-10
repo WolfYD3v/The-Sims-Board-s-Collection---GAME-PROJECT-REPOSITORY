@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://benr5uapmr6an"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_ojkoi"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_ay5qx"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_u5rur"]
+[ext_resource type="Texture2D" uid="uid://cj4nxbrgyxw36" path="res://assets/images/normal/7.png" id="4_ojkoi"]
+
+[node name="Normal8" instance=ExtResource("1_ojkoi")]
+description = "This is not a great view"
+next_button_text = "Jaine: Look closer"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_ay5qx")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_u5rur")]
+layout_mode = 2
+texture = ExtResource("4_ojkoi")

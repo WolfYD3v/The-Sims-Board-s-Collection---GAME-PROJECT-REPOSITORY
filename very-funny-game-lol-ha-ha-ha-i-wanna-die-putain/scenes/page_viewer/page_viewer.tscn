@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyjn55irwcjw3"]
+
+[ext_resource type="Script" uid="uid://cln7wkve1uah5" path="res://scenes/page_viewer/page_viewer.gd" id="1_olmd5"]
+[ext_resource type="PackedScene" uid="uid://uml2wdk0vewq" path="res://scenes/story_tree/story_tree.tscn" id="2_l3o52"]
+[ext_resource type="PackedScene" uid="uid://crfdf2wxpboqg" path="res://scenes/page_viewer/sub_controls.tscn" id="3_8lysx"]
+[ext_resource type="PackedScene" uid="uid://cvbb364nr0f7f" path="res://scenes/unlocks_shop/unlocks_shop.tscn" id="3_le0xa"]
+
+[node name="PageViewer" type="Node2D"]
+script = ExtResource("1_olmd5")
+start_narrative = 2
+
+[node name="StoryTree" parent="." instance=ExtResource("2_l3o52")]
+
+[node name="ControlNodes" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Menus" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="SubControls" parent="Menus" instance=ExtResource("3_8lysx")]
+
+[node name="UnlocksShop" parent="Menus" instance=ExtResource("3_le0xa")]
+visible = false
+
+[node name="InputTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="sub_narratives_hub_selected" from="Menus/SubControls" to="." method="_on_sub_controls_sub_narratives_hub_selected"]

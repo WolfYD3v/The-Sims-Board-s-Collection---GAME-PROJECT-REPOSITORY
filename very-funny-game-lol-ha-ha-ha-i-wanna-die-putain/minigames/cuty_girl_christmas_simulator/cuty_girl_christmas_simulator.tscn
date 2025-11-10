@@ -1,0 +1,253 @@
+[gd_scene load_steps=12 format=3 uid="uid://bx8eyf763iyxk"]
+
+[ext_resource type="Script" uid="uid://d0gesdt8h8b7j" path="res://minigames/cuty_girl_christmas_simulator/cuty_girl_christmas_simulator.gd" id="1_hcsyv"]
+[ext_resource type="Texture2D" uid="uid://d3x56ox1mke8f" path="res://game_icon_linux.png" id="2_quh5h"]
+[ext_resource type="Texture2D" uid="uid://clsejbguv7u2i" path="res://assets/images/cuty_girl_christmas/pluky.png" id="3_h6fr4"]
+[ext_resource type="PackedScene" uid="uid://brta2nuvt4v1s" path="res://minigames/cuty_girl_christmas_simulator/dialogue_box/dialogue_box.tscn" id="3_sfjux"]
+[ext_resource type="Texture2D" uid="uid://1hygobvvi5gb" path="res://icon.svg" id="3_w5hbb"]
+[ext_resource type="PackedScene" uid="uid://djock0aobx0l3" path="res://minigames/cuty_girl_christmas_simulator/simulator_hud/simulator_hud.tscn" id="6_w5hbb"]
+
+[sub_resource type="Animation" id="Animation_0q0dw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GUI/DialogHUD/Pluky:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GUI/DialogHUD/Pluky:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GUI/DialogHUD/Pluky:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GUI/DialogHUD/Pluky:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h6fr4"]
+resource_name = "enter_from_left"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GUI/DialogHUD/Pluky:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [-2.6179938779914944, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GUI/DialogHUD/Pluky:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(-850, 0), Vector2(0, 120)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GUI/DialogHUD/Pluky:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GUI/DialogHUD/Pluky:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jrl3d"]
+resource_name = "enter_from_right"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GUI/DialogHUD/Pluky:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GUI/DialogHUD/Pluky:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [0.87266463, 0.14728032]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GUI/DialogHUD/Pluky:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(2116.0002, -557.00006), Vector2(905, 90)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GUI/DialogHUD/Pluky:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(-5, -5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w5hbb"]
+resource_name = "leave"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GUI/DialogHUD/Pluky:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w5hbb"]
+_data = {
+&"RESET": SubResource("Animation_0q0dw"),
+&"enter_from_left": SubResource("Animation_h6fr4"),
+&"enter_from_right": SubResource("Animation_jrl3d"),
+&"leave": SubResource("Animation_w5hbb")
+}
+
+[node name="CutyGirlChristmasSimulator" type="Node2D"]
+script = ExtResource("1_hcsyv")
+
+[node name="BG" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+scale = Vector2(20, 20)
+texture = ExtResource("2_quh5h")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(806, 434)
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Island1" type="Sprite2D" parent="World"]
+position = Vector2(761, 798)
+scale = Vector2(10, 2)
+texture = ExtResource("3_w5hbb")
+
+[node name="Bridge1To2" type="Sprite2D" parent="World"]
+position = Vector2(1607.0001, 639)
+scale = Vector2(6, 0.5)
+texture = ExtResource("3_w5hbb")
+
+[node name="Island2" type="Sprite2D" parent="World"]
+position = Vector2(2462, 798)
+scale = Vector2(10, 2)
+texture = ExtResource("3_w5hbb")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="DialogHUD" type="Control" parent="GUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 122.0
+offset_top = -87.0
+offset_right = 122.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.05235988
+scale = Vector2(0.9, 0.9)
+
+[node name="Pluky" type="TextureRect" parent="GUI/DialogHUD"]
+layout_mode = 0
+offset_right = 800.00146
+offset_bottom = 600.0
+texture = ExtResource("3_h6fr4")
+
+[node name="DialogueBox" parent="GUI/DialogHUD" instance=ExtResource("3_sfjux")]
+layout_mode = 1
+
+[node name="SimulatorHUD" parent="GUI" instance=ExtResource("6_w5hbb")]
+
+[node name="IntroSceneVideoStreamPlayer" type="VideoStreamPlayer" parent="GUI"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlukyAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_w5hbb")
+}
+
+[connection signal="start_joy_poins_minigame" from="GUI/SimulatorHUD" to="." method="_on_simulator_hud_start_joy_poins_minigame"]

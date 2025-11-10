@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b570iwn83mb6g"]
+
+[ext_resource type="FontFile" uid="uid://bnrsdtf33c6v7" path="res://assets/fonts/Caprasimo-Regular.ttf" id="1_5g55p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tndn6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hvr0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_po6a3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cvhk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svtuq"]
+
+[resource]
+default_font = ExtResource("1_5g55p")
+default_font_size = 30
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 0)
+Button/colors/font_hover_color = Color(0, 0, 0, 0)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_tndn6")
+Button/styles/focus = SubResource("StyleBoxEmpty_3hvr0")
+Button/styles/hover = SubResource("StyleBoxEmpty_po6a3")
+Button/styles/normal = SubResource("StyleBoxEmpty_6cvhk")
+Button/styles/pressed = SubResource("StyleBoxEmpty_svtuq")

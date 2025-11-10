@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgopo4fss23ud"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_imy1b"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_nbkly"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_iqdkk"]
+[ext_resource type="Texture2D" uid="uid://solu4d7f3c8x" path="res://assets/images/normal/23.png" id="4_l55gu"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_nt0jp"]
+
+[node name="Normal15" instance=ExtResource("1_imy1b")]
+description = "The door has been opened"
+next_button_text = "Jaine: Open the door"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_nbkly")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_iqdkk")]
+layout_mode = 2
+texture = ExtResource("4_l55gu")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_nt0jp")]
+layout_mode = 2
+text = "You are in front of the door.
+What is hidden behind?
+A secret formula?
+At least some pounds?
+Or nothing..."

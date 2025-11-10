@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfa31wi5w0csp"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_c8kyd"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_i1whf"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_d485k"]
+[ext_resource type="Texture2D" uid="uid://cu4s316g48ohw" path="res://assets/images/normal/3.png" id="4_c8kyd"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_oxtrj"]
+
+[node name="Normal4" instance=ExtResource("1_c8kyd")]
+description = "You talked to a friend"
+next_button_text = "Jaine: Turn around"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_i1whf")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_d485k")]
+layout_mode = 2
+texture = ExtResource("4_c8kyd")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_oxtrj")]
+layout_mode = 2
+text = "The walls are high; you feel small. But you are 16 years old, not 8.
+Or is it the fault of the state of the server?
+
+But before you could give an answer, you got a text from a friend."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("5_oxtrj")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+Nawme: Soooo...
+Nawme: What's up bud?
+Jaine: I'm in a dark underground place, pretty scary if you ask.
+Nawme: It's not that chill after the war in your country.
+Jaine: Because it is in yours...
+Jaine: I'm jealous.
+Nawme: Says the \"I'm simple\" guy.
+Jaine: That's... right.
+Nawme: Shit, the cinema.
+Nawme: I have to go, bye!
+Jaine: You got cinemas already!
+Nawme: Yep.
+[Nawme disconnected]
+Jaine: Your life is always better than mine anyways.
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("5_oxtrj")]
+layout_mode = 2
+text = "You turn off your phone.
+But suddenly, you heard a heavy metal sound behind you."

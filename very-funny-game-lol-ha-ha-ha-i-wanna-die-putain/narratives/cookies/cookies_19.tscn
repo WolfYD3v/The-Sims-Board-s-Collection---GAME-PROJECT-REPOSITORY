@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://5av4did4wrkh"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_03fnw"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_uybnv"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_4axdb"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="5_6vhrf"]
+[ext_resource type="Texture2D" uid="uid://xh46yel0wwvj" path="res://assets/images/cookies/cookies_11_image.png" id="5_cnpxo"]
+
+[node name="Cookies19" instance=ExtResource("1_03fnw")]
+theme = ExtResource("2_uybnv")
+description = "Something is really wrong"
+next_button_text = "The chinesse: Crap!"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_4axdb")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("5_6vhrf")]
+layout_mode = 2
+texture = ExtResource("5_cnpxo")
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="1"]
+color = Color(0.7836526, 0.28578043, 0, 1)

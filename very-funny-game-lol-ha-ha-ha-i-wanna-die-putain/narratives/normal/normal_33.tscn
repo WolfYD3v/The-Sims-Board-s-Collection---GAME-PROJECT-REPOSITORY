@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3tdchip7o7tc"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_bf0pb"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_wshvi"]
+[ext_resource type="Script" uid="uid://x4r54oq46f1k" path="res://narratives/normal/normal_33.gd" id="2_x7w5g"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_x7w5g"]
+[ext_resource type="PackedScene" uid="uid://bx1m754xcs65f" path="res://minigames/s501_salmon_getter/s501_salmon_getter.tscn" id="5_x7w5g"]
+
+[node name="Normal33" instance=ExtResource("1_bf0pb")]
+script = ExtResource("2_x7w5g")
+description = "What is this narration..."
+next_button_text = "Zail: ..."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_wshvi")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_x7w5g")]
+layout_mode = 2
+text = "Salmon is here. Great job, proud knight.
+Or not... It depends if you finished the minigame.
+Zail: Wh... what was that...
+Zail: A... And this is not how to break the 4th wall.
+Tell this to the developer."
+
+[node name="S501SalmonGetter" parent="." index="2" instance=ExtResource("5_x7w5g")]

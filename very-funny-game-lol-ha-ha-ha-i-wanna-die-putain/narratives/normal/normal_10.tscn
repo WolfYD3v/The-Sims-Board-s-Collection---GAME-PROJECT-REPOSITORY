@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://64h7ontggmmb"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_ilwjs"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_tekn1"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_8oc5i"]
+[ext_resource type="Texture2D" uid="uid://bp3ybj0qhxbbb" path="res://assets/images/normal/9.png" id="4_ilwjs"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_fu78a"]
+
+[node name="Normal10" instance=ExtResource("1_ilwjs")]
+description = "Ah ah funny"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_tekn1")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_8oc5i")]
+layout_mode = 2
+texture = ExtResource("4_ilwjs")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_fu78a")]
+layout_mode = 2
+text = "You decided to go to the white door at the end of the corridor. 
+
+You got a text; you decided to answer."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("5_fu78a")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+8522-8241-9123: Arrived?
+8522-8241-9123: See, no one is alive in this bunker?
+8522-8241-9123: You should listen to me more often, you know.
+Jaine: Dude, I know no one is here.
+Jaine: It was an excuse to find some abandoned cash.
+8522-8241-9123: Smart, smart.
+8522-8241-9123: I've got great news.
+Jaine: Tell me.
+8522-8241-9123: In 2 weeks, we will be Hoyploma free.
+Jaine: Are you serious?
+8522-8241-9123: Yes, I am!
+8522-8241-9123: Isn't it amazing!
+Jaine: Of course, it is!
+8522-8241-9123: It was a joke :)
+Jaine: You bastard.
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("5_fu78a")]
+layout_mode = 2
+text = "After this \"funny\" joke, you decided to walk to the door."

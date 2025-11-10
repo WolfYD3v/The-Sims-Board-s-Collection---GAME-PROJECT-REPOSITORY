@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c83vrxjrqkji0"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_mhrco"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_x5abf"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_rifi8"]
+
+[node name="Normal16" instance=ExtResource("1_mhrco")]
+description = "Jaine's story is done in this Beta"
+next_button_text = "Change POV"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_x5abf")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("5_rifi8")]
+layout_mode = 2
+text = "Jaine: Is that it!
+Jaine: What is this demo...
+Jaine: There is nothing good to achieve here, as is the case in this POV.
+Jaine: After all, Jaine is not the only featured character.
+Jaine: Maybe if I embody an NPC I will be paid."

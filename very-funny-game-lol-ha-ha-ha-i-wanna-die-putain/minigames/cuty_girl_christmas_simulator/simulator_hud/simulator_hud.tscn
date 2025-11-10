@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://djock0aobx0l3"]
+
+[ext_resource type="Script" uid="uid://cj80wkv1hwoeo" path="res://minigames/cuty_girl_christmas_simulator/simulator_hud/simulator_hud.gd" id="1_3oyot"]
+[ext_resource type="Texture2D" uid="uid://1hygobvvi5gb" path="res://icon.svg" id="1_xamb6"]
+[ext_resource type="Texture2D" uid="uid://cfyd2et7i2ltm" path="res://assets/images/cuty_girl_christmas/boule_noeal.png" id="2_3oyot"]
+[ext_resource type="Texture2D" uid="uid://d3x56ox1mke8f" path="res://game_icon_linux.png" id="3_b7nao"]
+
+[node name="SimulatorHUD" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 221.0
+grow_horizontal = 2
+script = ExtResource("1_3oyot")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xamb6")
+expand_mode = 2
+
+[node name="HUDOrganisation" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BouleNoeal" type="TextureRect" parent="HUDOrganisation"]
+layout_mode = 2
+texture = ExtResource("2_3oyot")
+
+[node name="Sectors" type="VBoxContainer" parent="HUDOrganisation"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="JoyPointsSector" type="VBoxContainer" parent="HUDOrganisation/Sectors"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JoyPointsCounterLabel" type="Label" parent="HUDOrganisation/Sectors/JoyPointsSector"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "0 JP"
+
+[node name="GetJoyPointsButton" type="Button" parent="HUDOrganisation/Sectors/JoyPointsSector"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+focus_mode = 0
+icon = ExtResource("3_b7nao")
+flat = true
+expand_icon = true
+
+[node name="CompletionSector" type="HBoxContainer" parent="HUDOrganisation/Sectors"]
+layout_mode = 2
+
+[node name="CompletionPourcentageLabel" type="Label" parent="HUDOrganisation/Sectors/CompletionSector"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 35
+text = "0.0/100.0%"
+
+[node name="CompletionProgressBar" type="ProgressBar" parent="HUDOrganisation/Sectors/CompletionSector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+show_percentage = false
+
+[connection signal="pressed" from="HUDOrganisation/Sectors/JoyPointsSector/GetJoyPointsButton" to="." method="_on_get_joy_points_button_pressed"]

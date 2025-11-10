@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct4ya6erk5lac"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_3ebip"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_x0vrp"]
+[ext_resource type="PackedScene" uid="uid://dnc2upoaevs0m" path="res://scenes/base_page/elements/element_video.tscn" id="3_j6l4m"]
+[ext_resource type="VideoStream" uid="uid://c3r2fiaxvqkqs" path="res://assets/videos/s501_elevator.ogv" id="4_7fao2"]
+
+[node name="Normal1" instance=ExtResource("1_3ebip")]
+description = "You are in an elevator, going down"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_x0vrp")
+
+[node name="ElementVideo" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_j6l4m")]
+layout_mode = 2
+stream = ExtResource("4_7fao2")
+loop = false

@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://ug0h0tecvo80"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_qjv8t"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_6g4fj"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_uy55m"]
+[ext_resource type="PackedScene" uid="uid://dnc2upoaevs0m" path="res://scenes/base_page/elements/element_video.tscn" id="4_foxvk"]
+[ext_resource type="VideoStream" uid="uid://b65rcx8nyjq7l" path="res://assets/videos/cookies_video_2.ogv" id="5_foxvk"]
+
+[node name="Cookies5" instance=ExtResource("1_qjv8t")]
+theme = ExtResource("2_6g4fj")
+description = "The Heroes are here to save the day"
+next_button_text = "CEO: Here they are, our Warriors!"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_uy55m")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementVideo" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_foxvk")]
+layout_mode = 2
+stream = ExtResource("5_foxvk")
+loop = false
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="1"]
+color = Color(0.7836526, 0.28578043, 0, 1)

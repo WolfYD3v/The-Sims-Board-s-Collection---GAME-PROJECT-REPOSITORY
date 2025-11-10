@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2objllxtpo6v"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_mimbe"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_ewdn6"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_i2pmw"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_mimbe"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_ewdn6"]
+[ext_resource type="Texture2D" uid="uid://dm3gx2eordft2" path="res://assets/images/cookies/cookies_4_image(unfiltered).png" id="5_i2pmw"]
+[ext_resource type="Texture2D" uid="uid://dxv6rc884pagh" path="res://assets/images/cookies/cookies_2a_image.png" id="7_i2pmw"]
+
+[node name="Cookies6" instance=ExtResource("1_mimbe")]
+theme = ExtResource("2_ewdn6")
+description = "Funny joke, I made it :)"
+next_button_text = "CEO: Don't say this to me you depressed trash"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_i2pmw")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_mimbe")]
+layout_mode = 2
+texture = ExtResource("5_i2pmw")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_ewdn6")]
+layout_mode = 2
+text = "Employee n°?: So THEY will save our Dear Cookiearth, is it a joke?
+Employee n°?: I think it is. And it's about a too cooked cookie, a german madman one who has seems and do too much things in his life, an instagram crypto scammer, an arabe that wants to crash some planes and Kim Jong-un but not fat."
+
+[node name="ElementImage2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_mimbe")]
+layout_mode = 2
+texture = ExtResource("7_i2pmw")
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("5_ewdn6")]
+layout_mode = 2
+text = "CEO: It's not a joke my friends!
+Employees: You got a good point, we're cooked."
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="4"]
+color = Color(0.7836526, 0.28578043, 0, 1)
+
+[node name="SecondDegreeWarning" type="Label" parent="." index="1"]
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -79.0
+offset_right = 443.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "It's only a joke, second degree is required.
+Do NOT take this too seriously."

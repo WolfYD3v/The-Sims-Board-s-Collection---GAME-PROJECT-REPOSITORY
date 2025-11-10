@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dt0g2i1r2mng4"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_47dja"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_1jqgk"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_pwert"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_qyl2v"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_1prte"]
+[ext_resource type="Texture2D" uid="uid://bdhsvgwv62ipy" path="res://assets/images/cookies/cookies_5_image.png" id="6_1jqgk"]
+
+[node name="Cookies7" instance=ExtResource("1_47dja")]
+theme = ExtResource("2_1jqgk")
+description = "The day will be saved"
+next_button_text = "CEO: Oooooooohhh!!!!!! We can see the space, focus everyone!"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_pwert")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("5_1prte")]
+layout_mode = 2
+text = "CEO: You have to trust the process.
+CEO: Pluuusss... over of our 8 qualified people they are the 5 best cookies.
+CEO: This is our only option.
+Employee who knows who he is: We should reconsider this option. We can use our missile launcher of meteorite destroyer."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_1prte")]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 75
+text = "CEO: Nah shut up."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_qyl2v")]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("6_1jqgk")
+stretch_mode = 0
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="3"]
+color = Color(0.7836526, 0.28578043, 0, 1)

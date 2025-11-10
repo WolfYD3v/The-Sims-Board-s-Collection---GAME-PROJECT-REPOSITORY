@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5y8koanx173w"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_uud28"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_dxaw7"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_fu1qn"]
+[ext_resource type="Script" uid="uid://c67uklo5r7nvf" path="res://narratives/cookies/cookies_1.gd" id="3_gltjm"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_slgw4"]
+[ext_resource type="PackedScene" uid="uid://dnc2upoaevs0m" path="res://scenes/base_page/elements/element_video.tscn" id="4_6tbds"]
+[ext_resource type="VideoStream" uid="uid://bqurlosmn3en6" path="res://assets/videos/cookies_video_1.ogv" id="5_2iq80"]
+[ext_resource type="PackedScene" uid="uid://qomt12vfr86j" path="res://minigames/meteorite_clicker/meteorite_clicker.tscn" id="7_2iq80"]
+
+[node name="Cookies1" instance=ExtResource("1_uud28")]
+theme = ExtResource("2_dxaw7")
+script = ExtResource("3_gltjm")
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_fu1qn")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementVideo" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_6tbds")]
+layout_mode = 2
+stream = ExtResource("5_2iq80")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_slgw4")]
+layout_mode = 2
+text = "A 30 years old all grown up cookie is in front of his desk. It just so happens that today, the 8th of Cookitember, 2025, a meteorite will crash on the Cookiearth and destroy it. He was paniking, like other cookies in the CASC building. 
+
+What can he do in a such tragic situation like this one?
+And do we care about him? Not really.
+And what IS the CASC? A casque?"
+
+[node name="LinkButton" type="LinkButton" parent="Nodes/PageArea/PageContent/Elements" index="2"]
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+text = "(The CASC is not a casque btw...)"
+underline = 2
+uri = "https://wolfyd3v.github.io/The-Sim-Board-s-Collection-Website/narratives.html"
+
+[node name="Button" type="Button" parent="Nodes/PageArea/PageContent/Elements" index="3"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+text = "This cookie: Play a game to relax"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="4"]
+color = Color(0.7836526, 0.28578043, 0, 1)
+
+[node name="MeteoriteClicker" parent="." index="1" instance=ExtResource("7_2iq80")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Nodes/PageArea/PageContent/Elements/Button" to="." method="_on_button_pressed"]

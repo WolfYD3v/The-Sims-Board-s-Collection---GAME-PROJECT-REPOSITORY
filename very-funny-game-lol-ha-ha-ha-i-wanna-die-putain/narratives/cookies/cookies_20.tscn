@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://baocttxwp15k0"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_nr5l0"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_lbk26"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_nk8gt"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="4_ygkaf"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="5_n1pg8"]
+[ext_resource type="Texture2D" uid="uid://dykwbjw11a3ev" path="res://assets/images/cookies/cookies_12_image.png" id="6_5etwd"]
+
+[node name="Cookies20" instance=ExtResource("1_nr5l0")]
+theme = ExtResource("2_lbk26")
+description = "Player_058: Not an happy ending, yes!"
+next_button_text = "Big 5, but not the boom guy: Well shit."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_nk8gt")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("5_n1pg8")]
+layout_mode = 2
+texture = ExtResource("6_5etwd")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_ygkaf")]
+layout_mode = 2
+text = "The scammer: We messed up, so much.
+The chinesse: Is this… a dream… or a nightmare…
+The german: It's a dream mein frunde. 
+The too cooked cookie: They looked the same! They looked the same!
+The boom guy: It was a meaningfull explosion. I'm glad we've seen it.
+The boom guy: Let me join you, dear Mother planet by making myself boooom like you did!"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="2"]
+color = Color(0.7836526, 0.28578043, 0, 1)

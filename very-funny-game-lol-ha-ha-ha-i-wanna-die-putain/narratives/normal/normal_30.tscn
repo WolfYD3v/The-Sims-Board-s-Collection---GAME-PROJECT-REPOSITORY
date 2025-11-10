@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bctdstfcwgqo4"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_hheq5"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_twkcy"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_mruy3"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_mruy3"]
+[ext_resource type="Texture2D" uid="uid://bkr1nvns4bh8p" path="res://assets/images/s501_hoyploma.png" id="5_x6jj3"]
+
+[node name="Normal30" instance=ExtResource("1_hheq5")]
+description = "Curly's introduction"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_twkcy")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_mruy3")]
+layout_mode = 2
+text = "Your name is Curly, or Zail it's up to you to decide.
+As yourself, you live in the last city of your country; Hoyploma."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_mruy3")]
+layout_mode = 2
+texture = ExtResource("5_x6jj3")
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("3_mruy3")]
+layout_mode = 2
+text = "This place is unique, because the city is inside this building.
+It was establish by the Gouvernment of Great Tayn to keep alive the last piece of humanity of the country."

@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkmbmkcg0kcge"]
+
+[ext_resource type="Script" uid="uid://ucikbp36xxn7" path="res://scenes/credits/credits.gd" id="1_dr3ri"]
+[ext_resource type="AudioStream" uid="uid://b1now4mcj2ksr" path="res://assets/musics/WakeUp_UndergroundAmbience.mp3" id="2_8n0nl"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dr3ri")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Texts" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Texts"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Texts/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[u][b]FONTS:[/b][/u]
+- https://fonts.google.com/specimen/Bebas+Neue (Normal NARRATIVE)
+- https://fonts.google.com/specimen/Caveat+Brush?categoryFilters=Feeling:%2FExpressive%2FChildlike (Cookies NARRATIVE)
+- Meteorite clicker font: https://fonts.google.com/specimen/Pixelify+Sans
+
+[u][b]CREDITS SONG:[/b][/u]
+- BY ArcticTail (on Discord)
+To support his work, and his confiance to trust a degenerate ans his damn unserious project, check out his work: Did not get more informations from him
+
+[u][b]CINEMA SCENE (MOVIE POSTERS):[/b][/u]
+- Les Nouvelles aventures d'Aladin: https://lh3.googleusercontent.com/proxy/lOy6i2AdePIEz74jT4le2yYH1hQG8qzd1mngB0Xux7j4MGpKdSnMpOC-FWAhJxfiSJ9sw_DH_Zf0RvkY4WMKquVcs_31IVquT5GozNp_pngAFKYbQGUd5V_aLLd8Uj2V6PPpbJRiMI5p1vH3
+- Halloween 2: https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Halloween_II_%281981%29_theatrical_poster.jpg/250px-Halloween_II_%281981%29_theatrical_poster.jpg
+- Le père noël est une ordure: https://www.purepeople.com/media/affiche-du-film-le-pere-noel-est-une-or_m6009296
+- La soupe au choux: https://www.ivoire-france.com/fr/lot-4355-993752-27_soupe_aux_choux_1981_jean_girault_ave
+- Le transporteur: https://www.allocine.fr/film/fichefilm-38825/photos/detail/?cmediafile=117618
+- The Dictator: https://i.ebayimg.com/images/g/ELQAAOSw3Ytkxihj/s-l1200.jpg
+- Hot Shots! 2: https://image.over-blog.com/xYjfRFgLFghiFAVoxP95j_gr6-M=/filters:no_upscale()/image%2F0935117%2F20220130%2Fob_4a1d14_mv5bnziyngmwnzqtmtm1zi00mdgxlwjmogitmw.jpg
+- Le gendarme et les gendarmettes: https://i.ebayimg.com/images/g/VxwAAOSwH2ldNM0n/s-l1200.jpgs"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Texts/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[u][b]METEORITE CLICKER:[/b][/u]
+- Visuals assets: https://foozlecc.itch.io/void-environment-pack (Void - Environment Pack BY Foozle)
+Foozle Itch.io page (to support him and his great work): https://foozlecc.itch.io/
+
+[u][b]BIG 5 INTRODUCTION VIDEO:[/b][/u]
+- Explosion incrustation: https://www.youtube.com/watch?v=Q7KmAe8_jZE
+- Youtube video downloaded tool I've used: https://www.freemake.com/fr/free_video_downloader_choicest/
+- Ninja chinesse shwous sfx: https://lasonotheque.org/epee-qui-fend-l-air-s0128.html
+- Ninja smoke incrustation: https://www.youtube.com/watch?v=FtU58CNluB0
+- Song: Youtube audio library (Boogie Down)
+- Editing software used: Kdenlive
+
+[u][b]SALMON MINIGAME:[/b][/u]
+- Asset pack used: https://anokolisa.itch.io/free-pixel-art-asset-pack-topdown-tileset-rpg-16x16-sprites (same as in my game \"Unseen Goblins\")
+- Music: xxx
+- Vine boom sfx: https://www.myinstants.com/en/instant/vine-boom-sound-70972/
+
+[u][b]QUENOUILLE VIDEO:[/b][/u]
+\"À TU VU LES QUENOUILLE\": https://www.youtube.com/watch?v=BYIzxLIW71E
+Tool used: https://www.freemake.com/fr/free_video_downloader_choicest/"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Texts"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Texts/VBoxContainer"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Texts/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="Texts/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 25
+text = "Website"
+uri = "https://wolfyd3v.github.io/The-Sim-Board-s-Collection-Website/index.html"
+
+[node name="MinigameButton" type="Button" parent="Texts/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+focus_mode = 0
+text = "Play CookieSpaceHero"
+
+[node name="BGAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8n0nl")
+
+[connection signal="pressed" from="Texts/VBoxContainer/HBoxContainer/MinigameButton" to="." method="_on_minigame_button_pressed"]

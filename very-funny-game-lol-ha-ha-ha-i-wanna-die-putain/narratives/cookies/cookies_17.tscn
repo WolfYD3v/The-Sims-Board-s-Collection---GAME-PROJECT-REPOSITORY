@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://56fh1hobae0j"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_nic1r"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_bh11j"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_llmbn"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="4_bh11j"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_t7di5"]
+[ext_resource type="Texture2D" uid="uid://b416drtxwsgwv" path="res://assets/images/cookies/cookies_9_image.png" id="6_bh11j"]
+
+[node name="Cookies17" instance=ExtResource("1_nic1r")]
+theme = ExtResource("2_bh11j")
+description = "Right after the launching of the missile"
+next_button_text = "Employees: Let's do this!"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_llmbn")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_bh11j")]
+layout_mode = 2
+text = "Big 5 (from space): We did it! Send us in a harder mission next time Boss. It was too easy for experts like us.
+CEO: This is why I know I can count on you guys."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_t7di5")]
+layout_mode = 2
+texture = ExtResource("6_bh11j")
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_bh11j")]
+layout_mode = 2
+text = "CEO: Now let's celebrate our victory as we should do."
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="3"]
+color = Color(0.7836526, 0.28578043, 0, 1)

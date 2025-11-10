@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdcme2vu465kd"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_sw7i6"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_3pdfh"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_aallb"]
+
+[node name="Normal21" instance=ExtResource("1_sw7i6")]
+description = "Become yourself (as Zail)"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_3pdfh")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_aallb")]
+layout_mode = 2
+text = "Zail: That's much better."

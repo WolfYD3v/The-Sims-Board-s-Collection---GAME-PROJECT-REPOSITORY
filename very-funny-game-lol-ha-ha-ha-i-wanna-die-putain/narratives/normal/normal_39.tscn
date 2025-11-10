@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://m72t628qu1ki"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_8hubd"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_lwyab"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_t4ssy"]
+[ext_resource type="PackedScene" uid="uid://bkmbmkcg0kcge" path="res://scenes/credits/credits.tscn" id="4_lwyab"]
+
+[sub_resource type="Theme" id="Theme_t4ssy"]
+
+[node name="Normal39" instance=ExtResource("1_8hubd")]
+theme = SubResource("Theme_t4ssy")
+script = null
+
+[node name="Nodes" parent="." index="0"]
+visible = false
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_lwyab")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_t4ssy")]
+layout_mode = 2
+text = "After watching this funny video about quenouilles, you wasted no time and go on X to post about why Elon Musk is a Nazi and should be removed from the world.
+
+Like every end of the day..."
+
+[node name="PageLoading" parent="." index="1"]
+visible = false
+
+[node name="Credits" parent="." index="2" instance=ExtResource("4_lwyab")]
+layout_mode = 1

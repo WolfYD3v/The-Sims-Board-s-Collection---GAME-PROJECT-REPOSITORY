@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dnc2upoaevs0m"]
+
+[node name="ElementVideo" type="VideoStreamPlayer"]
+custom_minimum_size = Vector2(1100, 600)
+size_flags_horizontal = 6
+autoplay = true
+expand = true
+loop = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0d4x1st0gnax"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_kc7v7"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_lvg2u"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_klg8x"]
+
+[node name="Normal23" instance=ExtResource("1_kc7v7")]
+description = "POV of someone inside the cinema"
+next_button_text = "Zail: Look at the movie posters"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_lvg2u")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_klg8x")]
+layout_mode = 2
+text = "I am... someone inside the cinema. Amazing.
+Maybe one of the featured movies can be archived."

@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmer67yxkm45l"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_p2ybq"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_40qwn"]
+[ext_resource type="Script" uid="uid://bpqdfq77smaro" path="res://narratives/normal/normal_22.gd" id="2_lxva0"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_lxva0"]
+[ext_resource type="PackedScene" uid="uid://dnc2upoaevs0m" path="res://scenes/base_page/elements/element_video.tscn" id="5_lxva0"]
+[ext_resource type="VideoStream" uid="uid://by680bxaj3oln" path="res://assets/videos/s501_murder_scene.ogv" id="6_272ud"]
+
+[node name="Normal22" instance=ExtResource("1_p2ybq")]
+script = ExtResource("2_lxva0")
+description = "Nawme is calling someone"
+next_button_text = "Change POV instead"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_40qwn")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_lxva0")]
+layout_mode = 2
+text = "So he is entering the cinema.
+He is also calling someone at the same time... without headphones. How lame."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_lxva0")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+[Nawme is calling ???]
+[??? accepts the call]
+???: I can't continue this call.
+Nawme: Is he dead?
+???: No, not yet.
+Nawme: I get it.
+???: Why are you calling me? 
+Nawme: Because I need to buy some milk. 
+Nawme: I'm in a hurry. 
+???: Is the bus late? 
+Nawme: 4 hours. 
+???: Very late. 
+The milk is cold. 
+???: Man, it's you! It's been a while! Where were you? 
+Nawme: The war, you know. Communications were impossible, remember. 
+???: Of course, how can I forget that. 
+Nawme: Still on your mission as I can see. 
+???: Yeah. 
+???: And what about your courses? 
+Nawme: Let's not talk about that... 
+???: You need my help, right? 
+Nawme: I do. 
+Nawme: Meet me at the cinema. 
+???: And my target... she will run away from the city if I leave my position. 
+Nawme: Let her go, she doesn't deserve this. 
+???: She does. 
+Nawme: And why... 
+???: She is a woman. 
+???: And women have to die if they don't like me. 
+Nawme: Did she have money? 
+???: A lot.
+???: About 100k on her account. 
+Nawme: Sign me up, I'm in. 
+???: That's my bro, I send you my position. 
+Nawme: Thanks, and 50/50 as usual. 
+???: Of course, I will not scam you. 
+[Nawme has stopped the call]
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="CrimeSceneButton" type="Button" parent="Nodes/PageArea/PageContent/Elements" index="2"]
+layout_mode = 2
+text = "Watch the crime"
+
+[node name="CrimeSceneElementVideo" parent="." index="1" instance=ExtResource("5_lxva0")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_272ud")
+autoplay = false
+loop = false
+
+[connection signal="pressed" from="Nodes/PageArea/PageContent/Elements/CrimeSceneButton" to="." method="_on_crime_scene_button_pressed"]

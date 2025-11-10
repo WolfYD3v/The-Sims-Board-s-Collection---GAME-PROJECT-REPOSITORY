@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqh8bst7qp8wk"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_day02"]
+[ext_resource type="Script" uid="uid://dur5kdmxjdx7b" path="res://narratives/cuty_girl_christmas/cuty_girl_christmas.gd" id="2_d5qr1"]
+[ext_resource type="PackedScene" uid="uid://bx8eyf763iyxk" path="res://minigames/cuty_girl_christmas_simulator/cuty_girl_christmas_simulator.tscn" id="3_trpj3"]
+
+[node name="CutyGirlChristmas1" instance=ExtResource("1_day02")]
+script = ExtResource("2_d5qr1")
+description = "A full \"minigame\" as a page"
+next_button_text = "===>"
+
+[node name="Nodes" parent="." index="0"]
+visible = false
+
+[node name="PageLoading" parent="." index="1"]
+visible = false
+
+[node name="CutyGirlChristmasSimulator" parent="." index="2" instance=ExtResource("3_trpj3")]

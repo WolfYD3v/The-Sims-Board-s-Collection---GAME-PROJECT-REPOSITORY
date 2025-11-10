@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr7h21sbsl711"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_wm6f4"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_g37hs"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_lfkxa"]
+[ext_resource type="Texture2D" uid="uid://cj8hb75d0ytq2" path="res://assets/images/normal/14.png" id="5_g37hs"]
+[ext_resource type="Texture2D" uid="uid://c1lq0s6x8dd8f" path="res://assets/images/normal/13.png" id="5_wm6f4"]
+[ext_resource type="Texture2D" uid="uid://cadevetsx1knq" path="res://assets/images/normal/15.png" id="6_snt78"]
+
+[node name="Normal12" instance=ExtResource("1_wm6f4")]
+description = "Even the pit is empty"
+next_button_text = "Jaine: ... let's say this is normal..."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_g37hs")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_lfkxa")]
+layout_mode = 2
+texture = ExtResource("5_wm6f4")
+
+[node name="ElementImage2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_lfkxa")]
+layout_mode = 2
+texture = ExtResource("5_g37hs")
+
+[node name="ElementImage3" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_lfkxa")]
+layout_mode = 2
+texture = ExtResource("6_snt78")

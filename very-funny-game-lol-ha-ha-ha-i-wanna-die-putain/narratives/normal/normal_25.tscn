@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://w14xuysq31k"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_fgi05"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_0c2ah"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_yf837"]
+
+[node name="Normal25" instance=ExtResource("1_fgi05")]
+description = "It has 2 be archived"
+next_button_text = "Zail: Archive something else"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_0c2ah")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_yf837")]
+layout_mode = 2
+text = "I think I can archive the anomaly in this selection of movies.
+One thing added, some more to go."

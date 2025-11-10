@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://u0v7dbvq2amv"]
+
+[ext_resource type="Script" uid="uid://c58re8uhmjm5c" path="res://scenes/base_page/elements/element_link.gd" id="1_xqua7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac5b1"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g2o7"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eme34"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="ElementLink" type="Button"]
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ac5b1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ac5b1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1g2o7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eme34")
+text = "LINK TEXT"
+script = ExtResource("1_xqua7")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

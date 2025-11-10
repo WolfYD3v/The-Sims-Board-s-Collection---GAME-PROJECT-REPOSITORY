@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://b14ry108jmrmt"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_0p426"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_2b3il"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_fbrnc"]
+
+[node name="Normal28" instance=ExtResource("1_0p426")]
+description = "Restaurant scene"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_2b3il")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_fbrnc")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+Waiter: Hello Sir, a seat for one person?
+Zail: Yes sir.
+Waiter: Follow me.
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_fbrnc")]
+layout_mode = 2
+text = "You follow the waiter, and you sit down at the table he is pointing with his finger."
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("3_fbrnc")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+Waiter: Take a sit I will take your order in a few minutes.
+Zail: Thank you.
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="ElementLabel4" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("3_fbrnc")]
+layout_mode = 2
+text = "You look at the menu, and oh god, water is not free.
+After waiting some minutes, 34 to be exact, the waiter is coming to take your order."
+
+[node name="ElementLabel5" parent="Nodes/PageArea/PageContent/Elements" index="4" instance=ExtResource("3_fbrnc")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+Waiter: Did you make a choice?
+Zail: I want the Krubutchi, and nothing else.
+Waiter: Do you want a drink?
+Zail: No, I don't want to pay for water.
+Zail: That's messed up.
+Waiter: We... we offer free water to new customers.
+Zail: I don't see this information on the menu.
+Waiter: Well, that's beca...
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="ElementLabel6" parent="Nodes/PageArea/PageContent/Elements" index="5" instance=ExtResource("3_fbrnc")]
+layout_mode = 2
+text = "Narrator: Suddenly, you realised all of this is boring.
+Narrator: And so the developer has deleted the Philippe Etchebest joke. (jokes are back, baby!)
+Narrator: Now the story changes its POV again, to focus on the last important character of this NARRATIVE."

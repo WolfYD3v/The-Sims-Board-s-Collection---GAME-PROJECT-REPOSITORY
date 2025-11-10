@@ -1,0 +1,58 @@
+Cookies 13:
+desc -> Fun gameplay
+next_btn_text -> The german: Das was Strange.
+
+The too cooked cookie: What is that? A QTE to launch a missile?!
+The boom guy: Average video game in 2025:
+The german: What are you talking about. Where in space, not in a video game.
+The boom guy: Of course, it was just a joke. Did you laugh? :)
+The chinesse: Press this damn button, just press it!
+
+PRESS THE BUTTON TO LAUNCH A MISSILE ON AN METEORITE QTE TIME!!!!!
+Click on the circle on the screen to press a button. Once all were pressed the missile will be launched.
+Do you need a recap?
+
+THE RECAP OF THE TUTORIAL TO PRESS THE BUTTON TO LAUNCH A MISSILE ON AN METEORITE QTE TIME!!!!! (x{nb_times})
+Click on the circle on the screen to press a button. Once all were pressed the missile will be launched.
+Do you need a recap?
+
+THE BUTTON TO LAUNCH A MISSILE ON AN METEORITE HAS BEEN PRESSED DURING THE QTE TIME!!!!!
+I was really quick the QTE.
+Hope you liked this mini-game ;)
+
+
+
+Cookies 14:
+desc -> Joy everywhere
+next_btn_text -> Fake?
+
+On Cookiearth, and is the fuse, joy and can be heard.
+The CASC CEO's is proud of him, always saving the day with his great plan. How happy this end is. 
+It's so fucking not so fake. At all.
+
+
+
+Cookies 15:
+desc -> Why this end is fake?
+next_btn_text -> The 5 stars, exept not the boom guy: Well shit.
+
+In space there is a silence. A deap and heavy silence.
+What is going on…
+What changed the happy ambiance…
+What are they looking at...
+Let's see, from the CEO POV shall we…
+If it's possible…
+
+The scammer: We messed up, so much.
+The german: Yes, Europa ist destroyed!
+The chinesse: Is this… a dream… or a nightmare…
+The too cooked cookie: They looked the same! They looked the same!
+The boom guy: It was a magnifique explosion. I'm glad we've seen it.
+The boom guy: Let me join you, dear planet by making myself boooom like you did!!!!!
+
+
+
+
+END!
+Crédits
+Online (EASY!!!!!)

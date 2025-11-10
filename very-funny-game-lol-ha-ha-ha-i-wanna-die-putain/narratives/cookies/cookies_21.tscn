@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbe1abikbcony"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_ef0nh"]
+[ext_resource type="PackedScene" uid="uid://u0v7dbvq2amv" path="res://scenes/base_page/elements/element_link.tscn" id="3_fo3uy"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_ifvjk"]
+
+[sub_resource type="Theme" id="Theme_vlu5l"]
+
+[node name="Cookies21" instance=ExtResource("1_ef0nh")]
+theme = SubResource("Theme_vlu5l")
+description = "End of Cookies NARRATIVES"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_ifvjk")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLink" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_fo3uy")]
+layout_mode = 2
+text = "Go back on track"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="1"]
+color = Color(0.7836526, 0.28578043, 0, 1)

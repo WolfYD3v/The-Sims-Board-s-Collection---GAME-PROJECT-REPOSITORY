@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxchw2wum0sdq"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_ikcxj"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_egm64"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_iqg7u"]
+
+[node name="Normal18" instance=ExtResource("1_ikcxj")]
+description = "Nawme's backstory"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_egm64")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_iqg7u")]
+layout_mode = 2
+text = "I was born in a wealthy family. My dad was not a CEO, but his salary was higher compared to the mass. My mom was an art teacher in a prestigious art school.
+And for me... let's say... I studied in private schools only, of course, but...
+I don't want to be a teacher, and not work as a broker like my father. It sucks.
+I sell online courses to become a trader, and it's great! I am called a \"scammer\" online, but I get a lot of money from my customers. So I don't care at all.
+This was my life before the war began.
+
+I can't really say how Eupora has entered in this war, but it was horrible.
+It was bad for my family, like it was for my earnings. Man, luckily I was not forced to join the army. There was NO way.
+My dad died with my mom during the invasion of my country. No one was buying my courses anymore. It was an awful time.
+
+And so here am I, alive, jobless, having to work to live.
+My easy life is done, gone, fuck you war!
+
+Nawme: I should send this to the Historian. He will love this."

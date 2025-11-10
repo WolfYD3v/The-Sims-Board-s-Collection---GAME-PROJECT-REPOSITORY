@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://btecrm8gs076"]
+
+[ext_resource type="Theme" uid="uid://cpg05nvdgcadp" path="res://assets/themes/normal_theme.tres" id="1_1oeop"]
+[ext_resource type="Script" uid="uid://ck3ricoqb0ivu" path="res://scenes/narrative_scene/narrative_selector/narrative_selector.gd" id="1_wuor1"]
+[ext_resource type="Texture2D" uid="uid://1hygobvvi5gb" path="res://icon.svg" id="2_x6yan"]
+
+[node name="NarrativeSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1oeop")
+script = ExtResource("1_wuor1")
+
+[node name="Nodes" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="IconButton" type="Button" parent="Nodes"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+focus_mode = 1
+text = "Normal"
+icon = ExtResource("2_x6yan")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[connection signal="pressed" from="Nodes/IconButton" to="." method="_on_icon_button_pressed"]

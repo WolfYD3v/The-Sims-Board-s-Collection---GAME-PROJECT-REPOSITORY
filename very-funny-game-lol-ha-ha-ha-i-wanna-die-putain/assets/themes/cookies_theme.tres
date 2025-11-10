@@ -1,0 +1,63 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://ban215bm6enc1"]
+
+[ext_resource type="FontFile" uid="uid://dan4tonna8r6" path="res://assets/fonts/CaveatBrush-Regular.ttf" id="1_42q4d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k8br4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fha20"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1onl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_42q4d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppqw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kul3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgx3j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42q4d"]
+bg_color = Color(0.354452, 0.111845635, 1.2032687e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppqw8"]
+bg_color = Color(0.6862745, 0.24705882, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8br4"]
+bg_color = Color(0.6862745, 0.24705882, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_don45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ttci"]
+
+[resource]
+default_font = ExtResource("1_42q4d")
+Button/colors/font_color = Color(0.72813624, 0.26287857, 9.62615e-08, 1)
+Button/colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.7294118, 0.2627451, 0, 1)
+Button/constants/outline_size = 15
+Button/font_sizes/font_size = 40
+Button/styles/disabled = SubResource("StyleBoxEmpty_k8br4")
+Button/styles/focus = SubResource("StyleBoxEmpty_fha20")
+Button/styles/hover = SubResource("StyleBoxEmpty_i1onl")
+Button/styles/normal = SubResource("StyleBoxEmpty_42q4d")
+Button/styles/pressed = SubResource("StyleBoxEmpty_ppqw8")
+Label/colors/font_color = Color(0.8092508, 0.2950856, 1.92523e-07, 1)
+Label/constants/outline_size = 10
+Label/font_sizes/font_size = 40
+Label/styles/focus = SubResource("StyleBoxEmpty_kul3x")
+Label/styles/normal = SubResource("StyleBoxEmpty_jgx3j")
+LinkButton/colors/font_color = Color(0.7294118, 0.2627451, 0, 1)
+LinkButton/colors/font_focus_color = Color(0, 0, 0, 1)
+LinkButton/colors/font_hover_color = Color(0, 0, 0, 1)
+LinkButton/colors/font_outline_color = Color(0, 0, 0, 1)
+LinkButton/colors/font_pressed_color = Color(0.7294118, 0.2627451, 0, 1)
+LinkButton/constants/outline_size = 10
+LinkButton/font_sizes/font_size = 30
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_42q4d")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_ppqw8")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_k8br4")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_don45")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_8ttci")

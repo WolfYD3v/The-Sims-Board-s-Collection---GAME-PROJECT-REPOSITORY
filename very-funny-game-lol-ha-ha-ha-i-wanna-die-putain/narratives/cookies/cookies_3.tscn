@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://crq4vu8rwa3n6"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_viv45"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_w2by3"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_lyi1i"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_ntkbp"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="6_e5dee"]
+[ext_resource type="Texture2D" uid="uid://ktvokk1lhh6b" path="res://assets/images/cookies/cookies_2b_image.png" id="6_viv45"]
+[ext_resource type="Texture2D" uid="uid://dxv6rc884pagh" path="res://assets/images/cookies/cookies_2a_image.png" id="6_w2by3"]
+
+[node name="Cookies3" instance=ExtResource("1_viv45")]
+theme = ExtResource("2_w2by3")
+description = "The highter ups have to manage this situation"
+next_button_text = "Reveal the Solution"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_lyi1i")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("6_e5dee")]
+layout_mode = 2
+text = "CEO: We need to save the day."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_ntkbp")]
+layout_mode = 2
+texture = ExtResource("6_w2by3")
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("6_e5dee")]
+layout_mode = 2
+text = "With a confident stary shinny smile under his iconic white and red top hat.
+
+While his employees are speechless, and stay silent in front of this kind of confidence."
+
+[node name="ElementImage2" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("4_ntkbp")]
+layout_mode = 2
+texture = ExtResource("6_viv45")
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="4" instance=ExtResource("6_e5dee")]
+layout_mode = 2
+text = "He know how dangerous this meteorite is, but he has a plan. And his employees know that (I'm glad you've learned something from me).
+This meteorite is very hot, so hot that it can make them so baked and black like charbon.
+
+CEO: I have a plan, a Solution that can save us."
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="5"]
+color = Color(0.7836526, 0.28578043, 0, 1)

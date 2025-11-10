@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://homevquj8f2r"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_emrhq"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_8dxol"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_pyoll"]
+
+[node name="Normal31" instance=ExtResource("1_emrhq")]
+description = "Nights at Hyploma"
+next_button_text = "You: Open the message app"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_8dxol")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_pyoll")]
+layout_mode = 2
+text = "But in your case, at this time, you weren't aware about this reality.
+War still rages on outside the walls that protect you.
+
+It's late night, and the clock says that the sleeping time has started.
+To watch if this respected law is respected, night officers check if all doors are locked to avoid night explorations of the city.
+You are in your apartment, reading the latest news on your couch. The entrance door is locked, and you decided to text a close friend."

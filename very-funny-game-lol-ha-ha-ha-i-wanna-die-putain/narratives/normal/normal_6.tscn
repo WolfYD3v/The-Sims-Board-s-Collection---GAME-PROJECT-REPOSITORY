@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccmsmes4xatht"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_kdw2r"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_67saq"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_ulubk"]
+[ext_resource type="Texture2D" uid="uid://h7ybl8siy0mv" path="res://assets/images/normal/5.png" id="4_kdw2r"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_ppa8y"]
+
+[node name="Normal6" instance=ExtResource("1_kdw2r")]
+description = "Go deeper"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_67saq")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_ulubk")]
+layout_mode = 2
+texture = ExtResource("4_kdw2r")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_ppa8y")]
+layout_mode = 2
+text = "As sporty as you are, you run pretty fast; the size of this place is too big to be true."

@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq0jcrcv8goly"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_mn6f5"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_7st3v"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_e0ed7"]
+[ext_resource type="Script" uid="uid://dnab8dapn6jpm" path="res://narratives/cookies/cookies_13.gd" id="3_mn6f5"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="6_64epy"]
+
+[node name="Cookies13" instance=ExtResource("1_mn6f5")]
+theme = ExtResource("2_7st3v")
+script = ExtResource("3_mn6f5")
+description = "I'm running out of time let's cut the QTE (Before it was \"Fun gameplay\")"
+next_button_text = ">>>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_e0ed7")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("6_64epy")]
+layout_mode = 2
+text = "Big 5: Go missile, save our planet and kill this damn bitch!!!"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="1"]
+color = Color(0.7836526, 0.28578043, 0, 1)

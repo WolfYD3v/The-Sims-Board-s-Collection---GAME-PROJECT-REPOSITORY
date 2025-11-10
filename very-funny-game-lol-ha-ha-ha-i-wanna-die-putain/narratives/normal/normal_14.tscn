@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdsvx7tb8usqn"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_lfs7j"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_o47my"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_2t6l5"]
+[ext_resource type="Texture2D" uid="uid://dylwij38q6itd" path="res://assets/images/normal/19.png" id="4_o47my"]
+[ext_resource type="Texture2D" uid="uid://btluklecrqup0" path="res://assets/images/normal/20.png" id="5_2t6l5"]
+[ext_resource type="Texture2D" uid="uid://cgbuhde6nbjv" path="res://assets/images/normal/21.png" id="6_x8i4a"]
+[ext_resource type="Texture2D" uid="uid://b6h51f0fuy137" path="res://assets/images/normal/22.png" id="7_7mqre"]
+
+[node name="Normal14" instance=ExtResource("1_lfs7j")]
+description = "Walking"
+next_button_text = "Jaine: Here am I..."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_o47my")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_2t6l5")]
+layout_mode = 2
+texture = ExtResource("4_o47my")
+
+[node name="ElementImage2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_2t6l5")]
+layout_mode = 2
+texture = ExtResource("5_2t6l5")
+
+[node name="ElementImage3" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("3_2t6l5")]
+layout_mode = 2
+texture = ExtResource("6_x8i4a")
+
+[node name="ElementImage4" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("3_2t6l5")]
+layout_mode = 2
+texture = ExtResource("7_7mqre")

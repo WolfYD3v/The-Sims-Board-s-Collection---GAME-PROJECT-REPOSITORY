@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://drcpri0glcmm4"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_biy2l"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_3ld7a"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_5cgd5"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_narnd"]
+[ext_resource type="Texture2D" uid="uid://cxjbdp0f0eyhe" path="res://assets/images/cookies/cookies_7_image.png" id="5_biy2l"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="6_845ly"]
+
+[node name="Cookies11" instance=ExtResource("1_biy2l")]
+theme = ExtResource("2_3ld7a")
+description = "The Big 5 is in space, but what is going on with them?"
+next_button_text = "*Improvised fast forward*"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_5cgd5")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_narnd")]
+layout_mode = 2
+texture = ExtResource("5_biy2l")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("6_845ly")]
+layout_mode = 2
+text = "The german: The starz are sehr beautiful. Ich want to capture one and burn it to death.
+The chinesse: You are crazy.
+The german: As if YOU are NOT crazy too.
+The scammer: Do you think stars have a value in the crypto market?
+The too cooked cookie: But why…
+The scammer: Imagine. You create NFTs that gives to the investors the property of a real star in space.
+The boom guy: And then when the market goes crazy you rug pul like a scammer.
+The scammer: That's right, to the moon this scam will go!
+The german: Das ist illegal. Das ist nicht gut.
+The too cooked cookie: Who changed the language?
+The scammer: I'l change it back to English, don't worry.
+The german: Not good.
+The boom guy: Can we destroy the moon?
+The too cooked cookie: Why not steal it.
+The boom guy: And make it crash on the USA…
+Other people: No, not again!!!! Stop!!!!"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="2"]
+color = Color(0.7836526, 0.28578043, 0, 1)

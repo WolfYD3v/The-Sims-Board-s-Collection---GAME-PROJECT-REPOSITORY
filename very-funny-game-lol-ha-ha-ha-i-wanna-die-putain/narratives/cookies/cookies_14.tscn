@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwtd4pc5rgfhb"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_4emlw"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_hkd0h"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_ixv44"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="6_ftnpr"]
+
+[node name="Cookies14" instance=ExtResource("1_4emlw")]
+theme = ExtResource("2_hkd0h")
+description = "Joy everywhere"
+next_button_text = "Archiver ???: But what..."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_ixv44")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("6_ftnpr")]
+layout_mode = 2
+text = "On Cookiearth, and is the fuse, joy and can be heard.
+The CASC CEO's is proud of him, always saving the day with his great plan. How happy this end is. 
+But..."
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="1"]
+color = Color(0.7836526, 0.28578043, 0, 1)

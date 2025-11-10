@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c22l5lji7bjgx"]
+
+[ext_resource type="Texture2D" uid="uid://1hygobvvi5gb" path="res://icon.svg" id="1_swmak"]
+
+[node name="ElementImage" type="TextureRect"]
+clip_contents = true
+size_flags_vertical = 3
+texture = ExtResource("1_swmak")
+stretch_mode = 3

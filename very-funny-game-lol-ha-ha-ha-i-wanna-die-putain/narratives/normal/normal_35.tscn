@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://6p77tra041b8"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_llfjo"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_0jory"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_hqsif"]
+
+[node name="Normal35" instance=ExtResource("1_llfjo")]
+description = "What Narrator?!"
+next_button_text = "Zail: You weirdo"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_0jory")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_hqsif")]
+layout_mode = 2
+text = "Can't I talk about my beloved toilet paper damn you're not fun.
+I love toilet paper I want to have sex with a damn big roll of toilet paper!"

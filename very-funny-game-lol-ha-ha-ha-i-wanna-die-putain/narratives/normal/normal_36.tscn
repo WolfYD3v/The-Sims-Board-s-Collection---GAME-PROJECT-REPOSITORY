@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkkrgvnxehikv"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_pr8ci"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_ejfdq"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_i3cfn"]
+
+[node name="Normal36" instance=ExtResource("1_pr8ci")]
+description = "I use Arch btw"
+next_button_text = "You: Watch the video"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_ejfdq")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_i3cfn")]
+layout_mode = 2
+text = "Let's get back on track..."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_i3cfn")]
+layout_mode = 2
+text = "After your meal, you go on your computer because you are not sleepy.
+As you are against big corporations, you are on Linux (you use Arch btw). As a Arch user you go on Reddit to flex on your rice on r/unixporn. And you upvote only Arch rices. You have +100k Karmas so far, but you want more.
+\"Fuck you Microsoft\" is your slogan. And you know the basics of bash as a Linux user.
+And you trash talk about user friendly distros users as a toxic member of the Linux community because you felt soooo superior using Arch and not Mint."
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("3_i3cfn")]
+layout_mode = 2
+text = "Anyways, you want to watch a video a friend sended you."

@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfjxcwln6xxm8"]
+
+[ext_resource type="Script" uid="uid://cwopaqrutgyrg" path="res://scenes/stars_wars_joke/stars_wars_joke.gd" id="1_5mhhl"]
+[ext_resource type="VideoStream" uid="uid://bwhjlpfi4kep" path="res://assets/videos/stars_wars_joke.ogv" id="2_m7lvy"]
+[ext_resource type="SpriteFrames" uid="uid://dha3x04f3aupp" path="res://assets/sprites/stop_start_wars_joke/stop_stars_wars_joke_sprite_frames.tres" id="3_6yewn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yewn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxky1"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="StarsWarsJoke" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5mhhl")
+keep_trollin_goes_on = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stream = ExtResource("2_m7lvy")
+volume_db = 23.999992
+
+[node name="Alerts" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Alerts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Alerts"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0, 0.011764706, 1)
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[u]WARNING:[/u]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Alerts"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 144.0
+offset_bottom = 898.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0, 0.011764706, 1)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "This game contains content that can disturb the player, a lot, such as:
+
+Bad draws
+Jokes
+Videos
+Upgrades system
+Bad jokes
+Offensive jokes
+A lot of text
+Minigames
+A big \"I understand\" button
+...
+Jokes"
+fit_content = true
+
+[node name="CloseAlertButton" type="Button" parent="Alerts"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -107.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9999998, 0.92978835, 0.9177345, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_6yewn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6yewn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cxky1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxky1")
+text = "I understand"
+
+[node name="StopStarWarsJokeAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_6yewn")
+animation = &"start_animation"
+
+[node name="StopStarWarsJokeAudioStreamPlayer" type="AudioStreamPlayer" parent="."]

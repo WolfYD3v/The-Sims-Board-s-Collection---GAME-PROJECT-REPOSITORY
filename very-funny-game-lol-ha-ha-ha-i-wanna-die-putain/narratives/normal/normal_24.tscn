@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://cij8q8q8msltr"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_ps3ip"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_g3g3c"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_rhjf3"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_rhjf3"]
+[ext_resource type="Texture2D" uid="uid://bm6eauivvijm6" path="res://assets/images/s501_movie_posters/lnaa.jpeg" id="5_fvm6u"]
+[ext_resource type="Texture2D" uid="uid://biot153gbohsn" path="res://assets/images/s501_movie_posters/Halloween_II_(1981)_theatrical_poster.jpg" id="6_fvm6u"]
+[ext_resource type="Texture2D" uid="uid://dves5n6rin824" path="res://assets/images/s501_movie_posters/6009296-affiche-du-film-le-pere-noel-est-une-or-580x0-1.webp" id="7_cu64a"]
+[ext_resource type="Texture2D" uid="uid://1d0bj58damrl" path="res://assets/images/s501_movie_posters/soupe_aux_choux.jpg" id="8_vny2g"]
+[ext_resource type="Texture2D" uid="uid://e8qkel8iuqkh" path="res://assets/images/s501_movie_posters/transporteur.jpg" id="9_7bqac"]
+[ext_resource type="Texture2D" uid="uid://bkwgu24cb6dvx" path="res://assets/images/s501_movie_posters/the_dictator.jpg" id="10_uxh87"]
+[ext_resource type="Texture2D" uid="uid://dob54klxlsdk7" path="res://assets/images/s501_movie_posters/hot_shots_2.jpg" id="11_kjd0f"]
+[ext_resource type="Texture2D" uid="uid://brdeshhhgaje4" path="res://assets/images/s501_movie_posters/gendarme_gendarmettes.jpg" id="12_schy3"]
+
+[node name="Normal24" instance=ExtResource("1_ps3ip")]
+description = "A lot of movies"
+next_button_text = "WolfY_D3v: This is a great selection of movies"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_g3g3c")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_rhjf3")]
+layout_mode = 2
+text = "So what do we got here..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Nodes/PageArea/PageContent/Elements" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer" index="0" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("5_fvm6u")
+stretch_mode = 5
+
+[node name="ElementImage2" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer" index="1" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("6_fvm6u")
+stretch_mode = 5
+
+[node name="ElementImage3" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer" index="2" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("7_cu64a")
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Nodes/PageArea/PageContent/Elements" index="2"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ElementImage4" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer2" index="0" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("8_vny2g")
+stretch_mode = 5
+
+[node name="ElementImage5" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer2" index="1" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("9_7bqac")
+stretch_mode = 5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Nodes/PageArea/PageContent/Elements" index="3"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ElementImage6" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer3" index="0" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("10_uxh87")
+stretch_mode = 5
+
+[node name="ElementImage7" parent="Nodes/PageArea/PageContent/Elements/HBoxContainer3" index="1" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("11_kjd0f")
+stretch_mode = 5
+
+[node name="ElementImage8" parent="Nodes/PageArea/PageContent/Elements" index="4" instance=ExtResource("4_rhjf3")]
+layout_mode = 2
+texture = ExtResource("12_schy3")
+stretch_mode = 5

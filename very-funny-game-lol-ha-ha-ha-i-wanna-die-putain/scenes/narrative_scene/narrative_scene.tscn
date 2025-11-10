@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcqnno8l0gnh6"]
+
+[ext_resource type="Theme" uid="uid://cpg05nvdgcadp" path="res://assets/themes/normal_theme.tres" id="1_ffd2c"]
+[ext_resource type="Script" uid="uid://5jubvn1ds1d4" path="res://scenes/narrative_scene/narrative_scene.gd" id="1_oylgd"]
+[ext_resource type="Texture2D" uid="uid://u34xhpmcxonb" path="res://assets/backgrounds/narrative_selection_background.png" id="2_bolvp"]
+[ext_resource type="PackedScene" uid="uid://btecrm8gs076" path="res://scenes/narrative_scene/narrative_selector/narrative_selector.tscn" id="2_cfgyt"]
+[ext_resource type="Texture2D" uid="uid://4yinedjb8vo7" path="res://assets/icons/narrative_normal_icon.png" id="4_bolvp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bolvp"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="NarrativeScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ffd2c")
+script = ExtResource("1_oylgd")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bolvp")
+expand_mode = 1
+
+[node name="Interface" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NarrativeLabel" type="Label" parent="Interface"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_bolvp")
+text = "SELECT YOUR NARRATIVE..."
+autowrap_mode = 3
+uppercase = true
+
+[node name="Narratives" type="GridContainer" parent="Interface"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 300
+theme_override_constants/v_separation = 300
+columns = 4
+
+[node name="NarrativeSelector(Normal)" parent="Interface/Narratives" instance=ExtResource("2_cfgyt")]
+layout_mode = 2
+narrative_icon = ExtResource("4_bolvp")
+narrative_name = "NORMAL"
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -57.0
+offset_right = 226.0
+grow_vertical = 0
+focus_mode = 0
+disabled = true
+text = ">>> continue"
+
+[node name="AmbianceAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[connection signal="pressed" from="Interface/Narratives/NarrativeSelector(Normal)" to="." method="narrative_selected"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

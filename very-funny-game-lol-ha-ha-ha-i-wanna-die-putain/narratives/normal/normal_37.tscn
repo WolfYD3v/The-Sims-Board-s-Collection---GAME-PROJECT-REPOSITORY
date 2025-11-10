@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdgekld10qr7e"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_owkg1"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_klvyd"]
+[ext_resource type="PackedScene" uid="uid://dnc2upoaevs0m" path="res://scenes/base_page/elements/element_video.tscn" id="3_owkg1"]
+[ext_resource type="VideoStream" uid="uid://ccvvf8wnhy236" path="res://assets/videos/À TU VU LES QUENOUILLE.ogv" id="4_klvyd"]
+
+[node name="Normal37" instance=ExtResource("1_owkg1")]
+description = "Video played on Arch btw"
+next_button_text = "===>"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_klvyd")
+
+[node name="ElementVideo" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_owkg1")]
+layout_mode = 2
+stream = ExtResource("4_klvyd")
+loop = false

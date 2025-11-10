@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck5vdepxuip73"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_awhyp"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_ytems"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_8gdkr"]
+[ext_resource type="Texture2D" uid="uid://q6ewj51d7y7r" path="res://assets/images/normal/8.png" id="4_awhyp"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_6bi2v"]
+
+[node name="Normal9" instance=ExtResource("1_awhyp")]
+description = "Lights are weak"
+next_button_text = "Jaine: Go deeper"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_ytems")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_8gdkr")]
+layout_mode = 2
+texture = ExtResource("4_awhyp")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_6bi2v")]
+layout_mode = 2
+text = "Jaine: Yes. That's a weak light.
+Jaine: As expected."

@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://hj1jahidfwk1"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_dx7n6"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_ai3ew"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_dx7n6"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="4_ai3ew"]
+[ext_resource type="Texture2D" uid="uid://c1ib3lv4qqwol" path="res://assets/images/normal/1.png" id="4_v8ew8"]
+
+[node name="Normal2" instance=ExtResource("1_dx7n6")]
+description = "Jaine's introduction"
+next_button_text = "Jaine: Step outside the elevator"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_ai3ew")
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_dx7n6")]
+layout_mode = 2
+texture = ExtResource("4_v8ew8")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("4_ai3ew")]
+layout_mode = 2
+text = "Your name is Jaine. You have been sent by the survivors of Hoyploma to the Bunker by your own will. As a so-called \"survivor of the war\", you have to see if the \"cowards\" are still alive."

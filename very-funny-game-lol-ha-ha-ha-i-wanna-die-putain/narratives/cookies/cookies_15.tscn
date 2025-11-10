@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://blp5nv6w3j30"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_i5fa2"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_xichk"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_7tb0p"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="4_f1m3t"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="5_xichk"]
+[ext_resource type="Texture2D" uid="uid://dykwbjw11a3ev" path="res://assets/images/cookies/cookies_12_image.png" id="6_7tb0p"]
+
+[node name="Cookies15" instance=ExtResource("1_i5fa2")]
+theme = ExtResource("2_xichk")
+description = "Unidentified user: Not an happy endi..."
+next_button_text = "Big 5, but not the boom guy: Well sh..."
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_7tb0p")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_f1m3t")]
+layout_mode = 2
+text = "In the fuse no one is celebrating. A deap and heavy silent has replaced to exitment of a Victory against a deadly meteorite.
+What is going on…
+What happened...
+What are they looking at..."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("5_xichk")]
+layout_mode = 2
+texture = ExtResource("6_7tb0p")
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("4_f1m3t")]
+layout_mode = 2
+text = "The scammer: We messed up, so much.
+The chinesse: Is this… a dream… or a nightmare…
+The german: It's a dream mein frunde. 
+The too cooked cookie: They looked the same! They looked the same!
+The boom guy: It was a meaningfull explosion. I'm glad we've seen it.
+The boom guy: Let me join you, dear Mother planet by making myself boooom like you did!"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="3"]
+color = Color(0.7836526, 0.28578043, 0, 1)

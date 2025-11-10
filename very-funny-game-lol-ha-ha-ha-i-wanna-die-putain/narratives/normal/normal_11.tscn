@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dunpo1xk0qh3h"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_4fsuq"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_fairi"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="3_1d0fi"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="5_7ac04"]
+[ext_resource type="Texture2D" uid="uid://dcam0jhs0qm7e" path="res://assets/images/normal/10.png" id="5_fairi"]
+[ext_resource type="Texture2D" uid="uid://wsxsg1hmhd0" path="res://assets/images/normal/11.png" id="6_1d0fi"]
+[ext_resource type="Texture2D" uid="uid://br6upkdcp7n0v" path="res://assets/images/normal/12.png" id="7_1d0fi"]
+
+[node name="Normal11" instance=ExtResource("1_4fsuq")]
+description = "Walking to the door"
+next_button_text = "Jaine: Look around"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_fairi")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("5_7ac04")]
+layout_mode = 2
+text = "You just keep walking."
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_1d0fi")]
+layout_mode = 2
+texture = ExtResource("5_fairi")
+
+[node name="ElementImage2" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("3_1d0fi")]
+layout_mode = 2
+texture = ExtResource("6_1d0fi")
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="3" instance=ExtResource("5_7ac04")]
+layout_mode = 2
+text = "The way a roof should look is only an empty gray sky.
+Jaine: What is the Beta..."
+
+[node name="ElementImage3" parent="Nodes/PageArea/PageContent/Elements" index="4" instance=ExtResource("3_1d0fi")]
+layout_mode = 2
+texture = ExtResource("7_1d0fi")

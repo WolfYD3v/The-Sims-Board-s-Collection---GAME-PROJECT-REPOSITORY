@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm46hl66522uf"]
+
+[ext_resource type="Script" uid="uid://dmeh5lc4mpj8r" path="res://minigames/s501_salmon_getter/player/s_501_salmon_getter_player.gd" id="1_1wmk2"]
+[ext_resource type="Texture2D" uid="uid://dgdx17ncyoaru" path="res://assets/Pixel Crawler - Free Pack/Entities/Npc's/Knight/Run/Run-Sheet.png" id="2_ccmw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlxnc"]
+size = Vector2(96, 116)
+
+[node name="S501SalmonGetterPlayer" type="CharacterBody2D"]
+script = ExtResource("1_1wmk2")
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-1, -64)
+scale = Vector2(4, 4)
+texture = ExtResource("2_ccmw1")
+hframes = 6
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(3, 6)
+shape = SubResource("RectangleShape2D_jlxnc")
+
+[node name="NextWalkStepTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

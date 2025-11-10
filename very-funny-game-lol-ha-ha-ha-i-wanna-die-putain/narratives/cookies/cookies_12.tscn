@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmdmttsjlk3pj"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_3vvys"]
+[ext_resource type="Theme" uid="uid://ban215bm6enc1" path="res://assets/themes/cookies_theme.tres" id="2_mmk2f"]
+[ext_resource type="Texture2D" uid="uid://cwe7c36j7gqnp" path="res://assets/banners/cookie_banner.png" id="3_lfaiu"]
+[ext_resource type="PackedScene" uid="uid://c22l5lji7bjgx" path="res://scenes/base_page/elements/element_image.tscn" id="4_fdvyc"]
+[ext_resource type="Texture2D" uid="uid://ckhfw21nv4bx3" path="res://assets/images/cookies/cookies_8_image.png" id="5_3vvys"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="6_k1m34"]
+
+[node name="Cookies12" instance=ExtResource("1_3vvys")]
+theme = ExtResource("2_mmk2f")
+description = "Sometimes to much is too much"
+next_button_text = "Launch the missile"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("3_lfaiu")
+
+[node name="Background" parent="Nodes/PageArea/PageContent" index="0"]
+color = Color(0.684915, 0.24585831, 0, 1)
+
+[node name="ElementImage" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("4_fdvyc")]
+layout_mode = 2
+texture = ExtResource("5_3vvys")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("6_k1m34")]
+layout_mode = 2
+text = "The too cooked cookie: Is it the meteorite we have to destroy?
+The scammer: It is fast, big and not too far from Cookiearth. All the conditions are checked.
+The german: Arrg, I've got a great idea!
+The german: Why not launch the missile in Europa? To get the revenge I need…
+The boom guy: Are you… okay…"
+
+[node name="DownArea" parent="Nodes/PageArea/PageContent/Elements" index="2"]
+color = Color(0.7836526, 0.28578043, 0, 1)

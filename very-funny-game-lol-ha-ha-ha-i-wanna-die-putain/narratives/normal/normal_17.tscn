@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3r6y042mwwdr"]
+
+[ext_resource type="PackedScene" uid="uid://ccinb7who4l7m" path="res://scenes/base_page/base_page.tscn" id="1_i0d32"]
+[ext_resource type="Texture2D" uid="uid://3isrikefpf3s" path="res://assets/banners/normal_banner.png" id="2_xmcww"]
+[ext_resource type="PackedScene" uid="uid://ck0rhg8hc3c4q" path="res://scenes/base_page/elements/element_label.tscn" id="3_7emv5"]
+
+[node name="Normal17" instance=ExtResource("1_i0d32")]
+description = "Hi Nawme!"
+next_button_text = "See Nawme's backstory"
+
+[node name="Banner" parent="Nodes/TopBar" index="0"]
+texture = ExtResource("2_xmcww")
+
+[node name="ElementLabel" parent="Nodes/PageArea/PageContent/Elements" index="0" instance=ExtResource("3_7emv5")]
+layout_mode = 2
+text = "Your name is Nawme. You are an 25 years olf European that enjoys a normal life.
+Eupora, allthough there was damages after the war, has been quickly repaired.
+
+What are you doing right now? Enjoying your first film in the cinema after the war.
+You decided to text your friend to flex on his life."
+
+[node name="ElementLabel2" parent="Nodes/PageArea/PageContent/Elements" index="1" instance=ExtResource("3_7emv5")]
+layout_mode = 2
+text = "--------------------------------------------------------------------------------------------------------------------
+Nawme: Soooo...
+Nawme: What's up bud?
+Jaine: I'm in a dark underground place, pretty scary if you ask.
+Nawme: It's not that chill after the war in your country.
+Jaine: Because it is in yours...
+Jaine: I'm jealous.
+Nawme: Says the \"I'm simple\" guy.
+Jaine: That's... right.
+Nawme: Shit, the cinema.
+Nawme: I have to go, bye!
+Jaine: You got cinemas already!
+Nawme: Yep.
+--------------------------------------------------------------------------------------------------------------------"
+horizontal_alignment = 0
+
+[node name="ElementLabel3" parent="Nodes/PageArea/PageContent/Elements" index="2" instance=ExtResource("3_7emv5")]
+layout_mode = 2
+text = "You closed the message app, after flexing on your friend.
+You like flexing on people, and spoiling film endings too to a big amount of people.
+
+You think you are hated by a lot of people, and you're right!
+But you got a lot of money."

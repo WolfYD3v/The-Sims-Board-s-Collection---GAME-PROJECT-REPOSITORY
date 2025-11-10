@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://sbupdmjhh1qq"]
+
+[ext_resource type="Script" uid="uid://ch4lrd44cfpfm" path="res://minigames/s501_salmon_getter/officer/s_501_salmon_getter_officer.gd" id="1_y4k7g"]
+[ext_resource type="Texture2D" uid="uid://dpih8yrxx5r63" path="res://assets/Pixel Crawler - Free Pack/Entities/Mobs/Skeleton Crew/Skeleton - Warrior/Idle/Idle-Sheet.png" id="2_y4k7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4k7g"]
+size = Vector2(81, 121)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1ixc"]
+size = Vector2(100, 200)
+
+[sub_resource type="Gradient" id="Gradient_y4k7g"]
+colors = PackedColorArray(1, 0, 0, 0.47058824, 1, 0, 0, 0.47058824)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c1ixc"]
+gradient = SubResource("Gradient_y4k7g")
+
+[node name="S501SalmonGetterOfficer" type="StaticBody2D"]
+script = ExtResource("1_y4k7g")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+scale = Vector2(4, 4)
+texture = ExtResource("2_y4k7g")
+region_enabled = true
+region_rect = Rect2(0, 0, 28.315735, 32)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3.5)
+shape = SubResource("RectangleShape2D_y4k7g")
+
+[node name="PlayerDetector" type="Node2D" parent="."]
+position = Vector2(300, 0)
+
+[node name="CollisionArea" type="Area2D" parent="PlayerDetector"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector/CollisionArea"]
+shape = SubResource("RectangleShape2D_c1ixc")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerDetector/CollisionArea/CollisionShape2D"]
+scale = Vector2(1.55, 3.15)
+texture = SubResource("GradientTexture2D_c1ixc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerDetector/CollisionArea"]
+position = Vector2(-56, -135)
+rotation = -0.7853982
+shape = SubResource("RectangleShape2D_c1ixc")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerDetector/CollisionArea/CollisionShape2D2"]
+scale = Vector2(1.55, 3.15)
+texture = SubResource("GradientTexture2D_c1ixc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="PlayerDetector/CollisionArea"]
+position = Vector2(-56, 133)
+rotation = 0.7853982
+shape = SubResource("RectangleShape2D_c1ixc")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerDetector/CollisionArea/CollisionShape2D3"]
+scale = Vector2(1.55, 3.15)
+texture = SubResource("GradientTexture2D_c1ixc")
+
+[connection signal="body_entered" from="PlayerDetector/CollisionArea" to="." method="_on_collision_area_body_entered"]
